@@ -1,1 +1,39 @@
-毛线啊
+<tr id="saleProjectTR">
+									<td height="24">
+										<div align="right">
+											项目名称：
+										</div>
+									</td>
+									<td width="22%">
+										<h:selectOneListbox id="project_name_select"
+											onchange="_PROJECT_INFO.project_name_select_onchange('modGroup');"
+											style="width: 100%; display: block">
+										</h:selectOneListbox>
+										<h:inputHidden id="project_name" />
+									</td>
+									<td width="16%">
+										<div align="right">
+											项目编号：
+										</div>
+									</td>
+									<td width="22%">
+										<h:inputText id="project_id" style="width: 100%;"
+											readonly="true" />
+									</td>
+								</tr>
+								<tr id="saleContractTR">
+
+									<td width="16%">
+										<div align="right">
+											合同名称：
+										</div>
+									</td>
+									<td colspan="5">
+										<h:selectOneListbox id="contract_name_select"
+											onchange="_PROJECT_INFO.contract_name_select_onchange('modGroup');"
+											style="width: 100%; display: block">
+										</h:selectOneListbox>
+										<h:inputHidden id="contract_name" />
+										<h:inputHidden id="contract_id" />
+									</td>
+								</tr>
