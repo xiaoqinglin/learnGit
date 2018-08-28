@@ -35,3 +35,5 @@ function winGgroupContractOpen(){
        
       window.showModalDialog("/BossWeb/cs/ng/paymarkmanage/grp_selectConstractInfo.jsf", obj, "dialogHeight:500px;dialogWidth:700px");
 }
+
+修改捞
