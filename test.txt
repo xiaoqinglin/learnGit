@@ -1,39 +1,37 @@
-<tr id="saleProjectTR">
-									<td height="24">
-										<div align="right">
-											项目名称：
-										</div>
-									</td>
-									<td width="22%">
-										<h:selectOneListbox id="project_name_select"
-											onchange="_PROJECT_INFO.project_name_select_onchange('modGroup');"
-											style="width: 100%; display: block">
-										</h:selectOneListbox>
-										<h:inputHidden id="project_name" />
-									</td>
-									<td width="16%">
-										<div align="right">
-											项目编号：
-										</div>
-									</td>
-									<td width="22%">
-										<h:inputText id="project_id" style="width: 100%;"
-											readonly="true" />
-									</td>
-								</tr>
-								<tr id="saleContractTR">
+<script src="<%=request.getContextPath()%>/cs/ng/paymarkmanage/saleProjectInfo.js"></script>
 
-									<td width="16%">
-										<div align="right">
-											合同名称：
-										</div>
-									</td>
-									<td colspan="5">
-										<h:selectOneListbox id="contract_name_select"
-											onchange="_PROJECT_INFO.contract_name_select_onchange('modGroup');"
-											style="width: 100%; display: block">
-										</h:selectOneListbox>
-										<h:inputHidden id="contract_name" />
-										<h:inputHidden id="contract_id" />
-									</td>
-								</tr>
+
+<tr id="saleProjectTR" style="display: none">
+<td height="24">
+<div align="right">
+项目名称：
+</div>
+</td>
+<td width="22%">
+<h:selectOneListbox id="project_name_select"
+onchange="_PROJECT_INFO.project_name_select_onchange('modGroup');"
+style="width: 100%; display: block">
+</h:selectOneListbox>
+<h:inputHidden id="project_name" />
+</td>
+<td width="16%">
+<div align="right">
+项目编号：
+</div>
+</td>
+<td width="22%">
+<h:inputText id="project_id" style="width: 100%;"
+readonly="true" />
+</td>
+</tr>
+<tr id="saleContractTR" style="display: none">
+
+function winGgroupContractOpen(){
+      var obj = new Object();
+      obj.obj_window = window;
+      obj.sysFuncId = getMenuFuncId();
+      obj.home_city = $("home_city").value;
+      obj.group_id=$('group_id')?$('group_id').value:'';    
+       
+      window.showModalDialog("/BossWeb/cs/ng/paymarkmanage/grp_selectConstractInfo.jsf", obj, "dialogHeight:500px;dialogWidth:700px");
+}
